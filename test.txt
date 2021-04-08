@@ -1,0 +1,12 @@
+una de las contribuciones mas grande de la grado 
+es la creación del bada 
+
+contribuciones:
+
+
+naturaleza:
+'grado', 'valor', 'laya', 'clase', 'jaez', 'calidad', 'género', 'índole', 'condición', 'carácter', 'talante', 'ralea', 'calaña', 'especie', 'peaje', 'natura', 'categoría', 'naturalidad', 'nacionalidad', 'ciudadanía'
+
+rinoceronte:
+'bada', 'abada'
+
