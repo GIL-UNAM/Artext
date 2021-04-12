@@ -6,6 +6,7 @@ Created on Sun Mar 21 12:31:23 2021
 """
 
 from sinDict import *
+import re
 
 class char():
     def __init__(self):
@@ -180,3 +181,55 @@ class TextSimplifier:
                 str(self.wordsChanged[word])[1:-1] + '\n\n'
                 
         return optionsStr
+    
+class SynonymsFinder:
+    
+    def __init__(self, silabizer, listOfSynonyms):
+        self.silabizer = silabizer # Silabizer instance
+        self.listOfSynonyms = listOfSynonyms # List of lists of synonyms
+        self.words = {} # Big words dictionary
+        
+    def writeWordsToExcel(self, wb, filename):
+    
+        sheet = wb.add_sheet("Sinónimos", cell_overwrite_ok=True) # Add a sheet to write on
+        x, y = 0, 0
+        
+        for w in self.words:
+            sheet.write(y, x, w)
+            sheet.write(y, x+1, self.words[w])
+            y += 1
+            
+        wb.save("test.xls")
+        
+        return None
+    
+    def getNumberOfSyllables(self, word):    
+        syllables = self.silabizer(word) # Syllables of word
+        return len(syllables)
+
+    def checkInListForSynonyms(self, l, word):
+        first3Chars = word.lower()[:3]
+        
+        for w in l:
+            if word != w:
+                loweredWord = w.lower() # Current word in lower case
+                wordToCheckAgainst = ""
+                
+                if w in self.words:
+                    wordToCheckAgainst = self.words[w]
+                else:
+                    wordToCheckAgainst = word
+    
+                testWord = re.search("^" + first3Chars, loweredWord)
+                wSyllables = self.getNumberOfSyllables(w)
+                wordToCheckAgainstSyllables = self.getNumberOfSyllables(wordToCheckAgainst)
+                
+                if testWord and wSyllables < wordToCheckAgainstSyllables:
+                    self.words[word] = w
+                
+    
+    def processLargeWords(self):
+        for words in self.listOfSynonyms:
+            for word in words:
+                if self.getNumberOfSyllables(word) >= 5:
+                    self.checkInListForSynonyms(words, word)
