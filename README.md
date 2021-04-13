@@ -1,6 +1,6 @@
 # Artext
 
-El programa realiza un conteo de sílabas en todas las palabras del diccionarío de sinónimos, cuando detecta una palabra mayor o igual a 3 sílabas, busca su respectivo sinónimo con menor número de sílabas, y con la misma estructura inicial, generando un formato .xls, mismo que cuenta con dos columna una de la palabra y la otra del sinónimo.
+El programa realiza un conteo de sílabas en todas las palabras del diccionario de sinónimos, cuando detecta una palabra mayor o igual a 3 sílabas, busca su respectivo sinónimo con menor número de sílabas, y con la misma estructura inicial, generando un formato .xls, mismo que cuenta con dos columna una de la palabra y la otra del sinónimo.
 
 ## Requerimientos:
 
@@ -15,9 +15,9 @@ Descargue el código de git en su computadora y colóquelo en el directorio de s
 El programa se puede ejecutar directamente en consola sin necesidad de un IDE.
 El programa se encuentra en el directorio Artext y el script que debe ejecutar se llama main.py.
 
-## ¿De dónde se extrajó el diccionarío?
+## ¿De dónde se extrajo el diccionario?
 
-El diccionarío se bajó de la plataforma de Github, de la cuenta del usuarío Eduardo Blancas, que subío el repositório, con el objetivo de recolectar una colección de sinónimos en español colaborativa y abierta.
+El diccionario se bajó de la plataforma de Github, de la cuenta del usuario Eduardo Blancas, que subió el repositorio, con el objetivo de recolectar una colección de sinónimos en español colaborativa y abierta.
 
 La colección inicial es una copia del proyecto OpenThesaurus, proyecto que actualmente ya no se encuentra disponible, pero era para trabajar en un proyecto de procesamiento de lenguaje natural, motor de búsqueda, etc.
 
