@@ -25,3 +25,14 @@ La colección inicial es una copia del proyecto OpenThesaurus, proyecto que actu
 
 El programa está en proceso de desarrollo por lo que puede tener errores, sobre todo de lingüística. 
 
+## Bibliografía
+
+### Eduardo Blancas
+https://github.com/edublancas/sinonimos
+
+### OpenThesaurus
+https://www.openthesaurus.de/
+
+
+
+
